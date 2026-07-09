@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive Trello-style Kanban board built with HTML, CSS, and vanilla JavaScript.">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="Kanban Board">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <div>
+          <h1>Kanban Board</h1>
+          <p>Plan, move, and finish work with clarity.</p>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <label class="search-field" for="searchInput">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search cards" autocomplete="off" aria-label="Search cards">
+        </label>
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">
+          <span class="sun" aria-hidden="true"></span>
+          <span class="moon" aria-hidden="true"></span>
+        </button>
+        <button class="danger-button" id="clearAll" type="button" aria-label="Clear all cards">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 11v6M14 11v6M9 7l1-2h4l1 2M7 7l1 13h8l1-13"/></svg>
+          Clear
+        </button>
+      </div>
+    </header>
+
+    <main class="board-region" aria-label="Kanban board workspace">
+      <section class="composer-panel" aria-labelledby="composerTitle">
+        <div>
+          <h2 id="composerTitle">Create a card</h2>
+          <p>Add a task to To Do, then drag it anywhere.</p>
+        </div>
+        <form class="card-form" id="cardForm" novalidate>
+          <label class="sr-only" for="cardInput">Card title</label>
+          <input id="cardInput" type="text" maxlength="140" placeholder="Write a task, idea, or bug..." autocomplete="off" aria-describedby="formHelp">
+          <button type="submit" aria-label="Add card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            Add card
+          </button>
+        </form>
+        <p class="form-help" id="formHelp">Press Enter to add. Empty cards are ignored.</p>
+      </section>
+
+      <section class="board" id="board" aria-label="Task columns"></section>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="modal-backdrop" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" hidden>
+    <div class="confirm-dialog">
+      <h2 id="confirmTitle">Delete this card?</h2>
+      <p>This action removes the card from your board.</p>
+      <div class="dialog-actions">
+        <button class="secondary-button" id="cancelDelete" type="button">Cancel</button>
+        <button class="danger-button solid" id="confirmDelete" type="button">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
