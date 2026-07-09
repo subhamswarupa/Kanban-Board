@@ -1,93 +1,96 @@
-# Kanban Board
+# 📋 Kanban Board
 
-A production-ready Trello-style Kanban board built with pure HTML, CSS, and vanilla JavaScript. It runs directly in the browser by opening `index.html`, with no framework, build tools, or server required.
+A modern Trello-inspired Kanban Board built with HTML, CSS, and JavaScript. Easily create, organize, and track tasks by dragging cards between workflow columns. All data is automatically stored in LocalStorage, ensuring tasks remain available even after refreshing the page.
 
-## Description
+---
 
-Kanban Board is a polished task board for organizing work across To Do, In Progress, and Done columns. Cards can be created, edited, searched, deleted, reordered, moved between columns, and restored after refresh through localStorage.
+## 🚀 Live Demo
 
-## Features
+🌐 Live Website:
+https://subhamswarupa.github.io/Kanban-Board/
 
-- Three default workflow columns: To Do, In Progress, and Done
-- Add cards with an input box, button, or Enter key
-- Empty input validation with user feedback
-- Drag and drop cards into any column
-- Reorder cards and persist card order
-- Reorder columns and persist column positions
-- Double-click cards to edit with automatic saving
-- Delete cards with a confirmation dialog
-- Persistent board state using the LocalStorage API
-- Creation timestamps and unique IDs for every card
-- Search cards instantly
-- Clear all cards action
-- Per-column card counters
-- Dark and light mode toggle
-- Success notifications
-- Responsive glassmorphism UI
-- Custom scrollbars and smooth animations
-- CSS-only empty state illustrations
-- Keyboard-friendly controls and ARIA labels
+🎥 Demo Video:
+https://youtu.be/XmnO7ykq1pg
 
-## Screenshots
+---
 
-The app includes polished visual states suitable for repository screenshots:
+## ✨ Features
 
-- Light mode board view with CSS-only empty states
-- Dark mode board view using the theme toggle
-- Mobile board view with stacked responsive columns
+- Create new task cards
+- Drag & Drop task management
+- Three workflow columns
+  - To Do
+  - In Progress
+  - Done
+- Automatic LocalStorage persistence
+- Search tasks instantly
+- Dark / Light mode toggle
+- Delete individual cards
+- Clear all tasks
+- Responsive design
+- Modern glassmorphism UI
+- Task timestamps
+- Column task counters
 
-## Technologies Used
+---
+
+
+
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript ES6
+- JavaScript (ES6)
 - LocalStorage API
-- Drag and Drop API
+- HTML5 Drag & Drop API
 
-## Folder Structure
+---
 
-```text
-kanban-board/
-|-- index.html
-|-- style.css
-|-- script.js
-|-- README.md
-|-- LICENSE
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/subhamswarupa/Kanban-Board.git
 ```
 
-## How to Run
+Open the project folder
 
-1. Download or clone this repository.
-2. Open the `kanban-board` folder.
-3. Double-click `index.html`, or open it in any modern browser.
+```bash
+cd Kanban-Board
+```
 
-No installation, package manager, build command, or local server is needed.
+Launch the application by opening **index.html** in your browser.
 
-## LocalStorage Explanation
+---
 
-The application stores board data in the browser's localStorage under the key `vanilla-kanban-board-v1`. Saved data includes:
+## 🎯 How to Use
 
-- Column order
-- Card order
-- Card content
-- Card IDs
-- Card creation timestamps
+1. Add a new task.
+2. Drag tasks between To Do, In Progress, and Done.
+3. Search tasks using the search bar.
+4. Toggle between Dark and Light mode.
+5. Delete completed or unwanted tasks.
+6. Refresh the page—your tasks remain saved automatically.
 
-Theme preference is stored separately under `vanilla-kanban-theme`. Because localStorage is browser-specific, data remains available on the same device and browser until it is cleared by the user or browser settings.
+---
 
-## Future Improvements
+## ✅ Challenge Requirements
 
-- Custom column creation and renaming
-- Card labels and priority levels
-- Due dates and reminders
-- Markdown support inside cards
-- Import and export board data as JSON
-- Optional keyboard shortcuts for faster board navigation
+- Card Creation
+- Drag & Drop Card Movement
+- Persistent Storage using LocalStorage
 
-## Author
+---
 
-Created by Subha.
+## 📄 License
 
-## License
+This project is licensed under the MIT License.
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+---
+
+## 👨‍💻 Author
+
+**Subham Swarupa**
+
+GitHub: https://github.com/subhamswarupa
